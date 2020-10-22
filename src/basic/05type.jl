@@ -71,6 +71,7 @@ UInt64(123)::Identity |> println ∘ typeof
 # type op
 isa(UInt64(123) , Identity) |> println
 
+# abstract and inherit
 abstract type Person end
 struct Male <: Person end
 struct Female <: Person end
@@ -78,3 +79,12 @@ struct Female <: Person end
 isa(Female(),Person) |> println
 isa(Male(),Person) |> println
 supertype(Male) |> println
+# enums
+@enum WeekDays 周一=1 周二 周三 周四 周五 周六 周日
+周一|>typeof|>println
+Int(周日)|>println
+# Symbol
+const star=Set([:★,:☆])
+:★|>typeof|>println
+:★|>println
+isequal(:★,:☆)|>println
