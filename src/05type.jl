@@ -70,3 +70,11 @@ UInt64(123)::Identity |> println ∘ typeof
 
 # type op
 isa(UInt64(123) , Identity) |> println
+
+abstract type Person end
+struct Male <: Person end
+struct Female <: Person end
+
+isa(Female(),Person) |> println
+isa(Male(),Person) |> println
+supertype(Male) |> println

@@ -16,6 +16,7 @@ println("fact1:$(fact(10))")
     n == 0 ? 1 :    n*fact(n - 1)
  )
 "fact2:$(fact2(11))" |> println
+
 function fact3(n::Int)::Int
     if n < 0;
        error("")
@@ -25,6 +26,7 @@ function fact3(n::Int)::Int
       n*fact3(n - 1)
     end
 end
+
 "fact3:$(fact3(11))" |> println
 
 fact4(n::Int)::Int =
